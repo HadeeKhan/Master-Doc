@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Master Doc - Document Conversion Tools</title>
+    <link rel="icon" type="image/png" href="Icon/Logo/PNG/Favicon-32x32.png">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="Icon/Logo/PNG/main-logo-transparent.png" alt="Master Doc Logo" class="logo-img">
+                <h1>Master Doc</h1>
+            </div>
+            <div class="header-info">
+                <div class="greeting" id="greeting">Good morning!</div>
+                <div class="datetime" id="datetime">
+                    <span id="time"></span>
+                    <span id="date"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="services" id="services">
+            <h2>Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card active">
+                    <i class="fas fa-image"></i>
+                    <h3>Image to PDF</h3>
+                    <p>Convert your images to professional PDF documents</p>
+                    <a href="#converter" class="service-btn">Use Tool</a>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-file-word"></i>
+                    <h3>Word to PDF</h3>
+                    <p>Convert Word documents to PDF format</p>
+                    <a href="#" class="service-btn coming-soon">Coming Soon</a>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-file-excel"></i>
+                    <h3>Excel to PDF</h3>
+                    <p>Convert Excel spreadsheets to PDF</p>
+                    <a href="#" class="service-btn coming-soon">Coming Soon</a>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-file-powerpoint"></i>
+                    <h3>PPT to PDF</h3>
+                    <p>Convert PowerPoint presentations to PDF</p>
+                    <a href="#" class="service-btn coming-soon">Coming Soon</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="hero" id="converter">
+            <div class="hero-content">
+                <h1>Convert Images to PDF</h1>
+                <p>Transform your images into professional PDF documents with our easy-to-use converter</p>
+                <div class="upload-container">
+                    <div class="upload-area" id="dropZone">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                        <p>Drag & Drop images here or</p>
+                        <label for="fileInput" class="upload-btn">Choose Files</label>
+                        <input type="file" id="fileInput" multiple accept="image/*" hidden>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="loading-bar" id="loadingBar">
+            <div class="loading-progress"></div>
+        </div>
+
+        <section class="options-panel" id="optionsPanel" style="display: none;">
+            <h2>Conversion Options</h2>
+            <div class="options-container">
+                <div class="option-group">
+                    <label>Page Size:</label>
+                    <select id="pageSize">
+                        <option value="A4">A4</option>
+                        <option value="Letter">Letter</option>
+                        <option value="Legal">Legal</option>
+                    </select>
+                </div>
+                <div class="option-group">
+                    <label>Image Quality:</label>
+                    <select id="imageQuality">
+                        <option value="high">High</option>
+                        <option value="medium">Medium</option>
+                        <option value="low">Low</option>
+                    </select>
+                </div>
+                <div class="option-group">
+                    <label>Page Orientation:</label>
+                    <select id="orientation">
+                        <option value="portrait">Portrait</option>
+                        <option value="landscape">Landscape</option>
+                    </select>
+                </div>
+                <div class="option-group">
+                    <label>Page Margins:</label>
+                    <input type="number" id="margins" value="10" min="0" max="50">
+                </div>
+                <button id="convertBtn" class="convert-btn">Convert to PDF</button>
+            </div>
+        </section>
+
+        <section class="preview-section" id="previewSection" style="display: none;">
+            <h2>Selected Images</h2>
+            <div class="preview-container" id="previewContainer"></div>
+            <div class="preview-actions">
+                <button id="removeAllBtn" class="remove-btn">Remove All</button>
+                <button id="reorderBtn" class="reorder-btn">Reorder Images</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Master Doc</h3>
+                <p>Your one-stop solution for all document conversion needs. We provide fast, secure, and easy-to-use tools for converting various file formats to PDF.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: support@masterdoc.com</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Master Doc. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html> 
